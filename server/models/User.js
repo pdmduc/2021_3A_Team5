@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        reuiqred: [true, "Please add a password"],
+        required: [true, "Please add a password"],
         minlength: 6,
         select: false,
     },
@@ -52,9 +52,12 @@ UserSchema.methods.getSignedToken = function() {
 UserSchema.methods.getResetPasswordToken = function() {
     const resetToken = crypto.randomBytes(20).toString("hex");
 
-    this.resetPasswordToken = crypto.createHash("sha256").update(resetToken).digest("hex");
-    // From now moment + 10 * (60* 1000) (60sec* 1000miliseconds = 1minute)
-    this.resetPasswordExpired = Date.now() + 10 * (60 * 1000)
+    this.resetPasswordToken = crypto
+        .createHash("sha256")
+        .update(resetToken)
+        .digest("hex");
+    
+    this.resetPasswordExpired = Date.now() + 10 * (60 * 1000); //Ten minutes
 
     return resetToken;
 }
