@@ -24,7 +24,7 @@ const UserSchema = new mongoose.Schema({
         select: false,
     },
     resetPasswordToken: String,
-    resetPasswordExpired: Date
+    resetPasswordExpire: Date
 });
 
 UserSchema.pre("save", async function(next) {
@@ -57,7 +57,7 @@ UserSchema.methods.getResetPasswordToken = function() {
         .update(resetToken)
         .digest("hex");
     
-    this.resetPasswordExpired = Date.now() + 10 * (60 * 1000); //Ten minutes
+    this.resetPasswordExpire = Date.now() + 10 * (60 * 1000); //Ten minutes
 
     return resetToken;
 }

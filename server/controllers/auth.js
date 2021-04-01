@@ -66,7 +66,8 @@ exports.forgotpassword = async (req, res, next) => {
             <h1>You have requested a password reset </h1>
             <p>Please go to this link to reset your password </p>
             <a href=${resetUrl} clicktracking=off>${resetUrl}</a>
-        `
+        `;
+        
         try {
             await sendEmail({
                 to: user.email,
@@ -88,7 +89,6 @@ exports.forgotpassword = async (req, res, next) => {
     } catch (error) {
         next(error);
     }
-    res.send("Forgot Password Route");
 };
 
 exports.resetpassword = async (req, res, next) => { 
@@ -113,7 +113,7 @@ exports.resetpassword = async (req, res, next) => {
         
         await user.save();
 
-        res.status(201).json({
+        return res.status(201).json({
             success: true,
             data: "Password Reset Success"
         })
