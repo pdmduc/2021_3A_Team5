@@ -1,0 +1,88 @@
+.login-screen-splitScreen {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+}
+.login-screen__left {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview__right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-screen__form {
+  width: 380px;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.login-screen__title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.login-screen__forgotpassword {
+  font-size: 0.7rem;
+}
+
+.login-screen__subtext {
+  font-size: 0.7rem;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.login-btn {
+  /* Frame 10 */
+
+  /* Auto Layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 95px;
+
+  position: absolute;
+  width: 228px;
+  height: 57px;
+  left: 396px;
+  top: 584px;
+
+  /* Accent / Green */
+  background: linear-gradient(90deg, #37bcae 0%, #38cd98 100%);
+  box-shadow: 0px 14px 25px rgba(55, 188, 174, 0.3);
+  border-radius: 60px;
+
+  /* Log in */
+
+  position: static;
+  width: 38px;
+  height: 21px;
+  left: 95px;
+  top: 18px;
+
+  /* Poppins medium 13 */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 160%;
+  /* identical to box height, or 21px */
+  text-align: center;
+
+  /* 3 */
+  color: #ffffff;
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 10px;
+}
