@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+//Navbar
+import Navbar from './components/navbar/Navbar';
+
 // Routing
 import PrivateRoute from './components/routing/PrivateRoute';
 
@@ -14,6 +17,7 @@ const App = () => {
   return (
     <Router>
       <div className="app">
+        <Navbar />
         <Switch>
           <PrivateRoute exact path="/" component={PrivateScreen} />
           <Route exact path="/login" component={LoginScreen} />

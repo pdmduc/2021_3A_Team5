@@ -58,7 +58,7 @@ const ForgotPasswordScreen = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="submit-btn">
           Send Email
         </button>
       </form>

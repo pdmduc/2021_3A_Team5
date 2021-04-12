@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './LoginScreen.css';
+import overview1 from '../../assets/overview1.png';
 
 const LoginScreen = ({ history }) => {
   const [email, setEmail] = useState('');
@@ -50,6 +51,7 @@ const LoginScreen = ({ history }) => {
           <div className="form-group">
             <label htmlFor="email">Email:</label>
             <input
+              className="input-field"
               type="email"
               required
               id="email"
@@ -72,6 +74,7 @@ const LoginScreen = ({ history }) => {
               </Link>
             </label>
             <input
+              className="input-field"
               type="password"
               required
               id="password"
@@ -82,7 +85,7 @@ const LoginScreen = ({ history }) => {
             />
           </div>
 
-          <button type="submit" className="login-btn" tabIndex={4}>
+          <button type="submit" className="submit-btn" tabIndex={4}>
             Login
           </button>
 
@@ -93,7 +96,9 @@ const LoginScreen = ({ history }) => {
       </div>
 
       <div className="overview__right">
-        <h3 className="overview__title">Image placeholder</h3>
+        <img src={overview1} />
+        <h3 className="overview__title">Strategy Overview</h3>
+        <p>Plan and track your strategies for capital managment</p>
       </div>
     </div>
   );
