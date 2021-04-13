@@ -42,3 +42,12 @@
   background-color: white;
   border: none;
 }
+
+.menu-icon {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 30px;
+  list-style: none;
+  width: 70vw;
+  justify-content: start;
+}
