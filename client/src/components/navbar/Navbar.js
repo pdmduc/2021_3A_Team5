@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { MenuItems } from './MenuItems';
 import './Navbar.css';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
@@ -12,17 +13,19 @@ class Navbar extends Component {
       <nav className="NavbarItems">
         <div className="menu-icon">
           <Sidebar />
-          <button className="nav-logo" href={'/login'}>
-            <Logo />
+          <button className="nav-logo">
+            <Link to="/">
+              <Logo />
+            </Link>
           </button>
         </div>
         <ul className="nav-menu">
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <button className={item.cName} href={item.url}>
+                <Link className={item.cName} to={item.url}>
                   {item.title}
-                </button>
+                </Link>
               </li>
             );
           })}

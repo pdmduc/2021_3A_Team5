@@ -30,13 +30,11 @@ function Sidebar() {
             </li>
             {SidebarData.map((item, index) => {
               return (
-                <li key={index}>
-                  <button className={item.cName}>
-                    <Link to={item.path}>
-                      {item.icon}
-                      <span>{item.title}</span>
-                    </Link>
-                  </button>
+                <li className="sidebar-menu-link" key={index}>
+                  <Link to={item.path} className={item.cName}>
+                    <i>{item.icon}</i>
+                    <span>{item.title}</span>
+                  </Link>
                 </li>
               );
             })}

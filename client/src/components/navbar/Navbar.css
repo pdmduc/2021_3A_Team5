@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  margin-right: 2%;
 }
 
 .nav-menu {
@@ -21,10 +22,6 @@
   color: rgba(88, 89, 91, 1);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  width: 152px;
-  height: 49px;
-  left: 1656px;
-  top: 28px;
   border-radius: 60px;
   border-color: white;
   border-style: solid;
