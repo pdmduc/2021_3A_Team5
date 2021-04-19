@@ -1,0 +1,73 @@
+.createstrategy {
+  width: 100%;
+  display: block;
+  box-sizing: content-box;
+  background-color: #f1f4f9;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.cs-header {
+  margin-bottom: 3%;
+  margin-left: 10%;
+}
+
+.cs-sn-create {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 10%;
+}
+
+::placeholder {
+  color: #a7acc1;
+}
+
+.sn-create-input-field {
+  height: 53px;
+  width: 80%;
+  padding-left: 24px;
+  border-radius: 100px;
+  padding: 20px;
+}
+
+.cs-selectstrategy {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 10%;
+  padding: 0px 5px 16px;
+
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 2px 30px 0px #2734430d;
+}
+
+.cs-ss-column1 {
+  box-sizing: border-box;
+  margin-top: 1%;
+  margin-left: 1%;
+  min-width: 0px;
+  flex: 1 1 0%;
+}
+
+.cs-ss-c1-selectstrategy {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+.cs-ss-column2 {
+  box-sizing: border-box;
+  margin-top: 1%;
+  margin-left: 1%;
+  min-width: 0px;
+  flex: 1 1 0%;
+}
+
+.cs-ss-column3 {
+  box-sizing: border-box;
+  margin-top: 1%;
+  margin-left: 1%;
+  min-width: 0px;
+  flex: 1 1 0%;
+}

@@ -12,6 +12,7 @@ import LoginScreen from './components/screens/LoginScreen';
 import RegisterScreen from './components/screens/RegisterScreen';
 import ForgotPasswordScreen from './components/screens/ForgotPasswordScreen';
 import ResetPasswordScreen from './components/screens/ResetPasswordScreen';
+import CreateStrategy from './components/screens/CreateStrategy';
 
 const App = () => {
   return (
@@ -20,6 +21,11 @@ const App = () => {
         <Navbar />
         <Switch>
           <PrivateRoute exact path="/" component={PrivateScreen} />
+          <PrivateRoute
+            exact
+            path="/createstrategy"
+            component={CreateStrategy}
+          />
           <Route exact path="/login" component={LoginScreen} />
           <Route exact path="/register" component={RegisterScreen} />
           <Route
